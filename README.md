@@ -2,10 +2,6 @@
 
 This repo contains experiment and demo code that leverages ChatGPT for handling ambiguous user commands to smart assistants. It recieves vague instructions like "get ready for a party" and produces a set of changes to smart home device states in response.
 
-## Requirements
-- Install the ChatGPT wrapper for CLI: https://github.com/mmabrouk/chatgpt-wrapper
-    - Use the Playwright installation instructions
-
 ## Files
 ``./demo/`` contains the Python notebook for the demo application
 
