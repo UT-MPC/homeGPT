@@ -1,4 +1,4 @@
-# complex context, ambiguous command
+# medium context, simple command
 
 ## Instructions
 
@@ -7,82 +7,9 @@ For every trial in this file, please assign a binary score (0 or 1) based on the
 - Poor response (0): The changes to the devices do not at all reflect the intent behind the user command, or the response is malformed/garbled.
 - Good response (1): The changes to the devices are reasonable for the command. You can imagine _someone_             being satisfied with the result, even if it is somewhat subjective (e.g., based on different personal preferences).
 
-## Trial 0 - complex context, ambiguous command 
+## Trial 0 - medium context, simple command 
 
-command: **i am tired**
-
-chatgpt's changes to the devices: 
-
-``` json
-  {
-    "user": {
-      "location": "living_room"
-    },
-    "bedroom": {
-      "lights": {
-        "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
-          "color": {
-            "r": 255,
-            "g": 255,
-            "b": 255
-          }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      }
-    },
-    "living_room": {
-      "lights": {
-        "overhead": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
-          "color": {
-            "r": 255,
-            "g": 255,
-            "b": 255
-          }
-        },
-        "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
-          "color": {
-            "r": 255,
-            "g": 255,
-            "b": 255
-          }
-        }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
-      }
-    }
-  }
-```
-
-## Trial 1 - complex context, ambiguous command 
-
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -94,21 +21,12 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
         }
       }
     },
@@ -136,36 +54,14 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
       }
     }
   }
 ```
 
-## Trial 2 - complex context, ambiguous command 
+## Trial 1 - medium context, simple command 
 
-command: **i am tired**
-
-chatgpt's changes to the devices: 
-
-``` 
-invalid JSON in response!
-```
-
-## Trial 3 - complex context, ambiguous command 
-
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -177,21 +73,12 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
         }
       }
     },
@@ -219,26 +106,14 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
       }
     }
   }
 ```
 
-## Trial 4 - complex context, ambiguous command 
+## Trial 2 - medium context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -250,21 +125,12 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
         }
       }
     },
@@ -292,99 +158,14 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
       }
     }
   }
 ```
 
-## Trial 5 - complex context, ambiguous command 
+## Trial 3 - medium context, simple command 
 
-command: **i am tired**
-
-chatgpt's changes to the devices: 
-
-``` json
-  {
--   "user": {
--     "location": "living_room"
--   },
-    "bedroom": {
-      "lights": {
-        "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
-          "color": {
-            "r": 255,
-            "g": 255,
-            "b": 255
-          }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      }
-    },
-    "living_room": {
-      "lights": {
-        "overhead": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
-          "color": {
-            "r": 255,
-            "g": 255,
-            "b": 255
-          }
-        },
-        "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
-          "color": {
-            "r": 255,
-            "g": 255,
-            "b": 255
-          }
-        }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
-      }
-    }
-  }
-```
-
-## Trial 6 - complex context, ambiguous command 
-
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -396,21 +177,12 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
         }
       }
     },
@@ -438,26 +210,14 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
       }
     }
   }
 ```
 
-## Trial 7 - complex context, ambiguous command 
+## Trial 4 - medium context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -469,21 +229,12 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
         }
       }
     },
@@ -511,26 +262,14 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
       }
     }
   }
 ```
 
-## Trial 8 - complex context, ambiguous command 
+## Trial 5 - medium context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -542,21 +281,12 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
         }
       }
     },
@@ -584,26 +314,14 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
       }
     }
   }
 ```
 
-## Trial 9 - complex context, ambiguous command 
+## Trial 6 - medium context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -615,21 +333,12 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
-        }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
         }
       }
     },
@@ -657,26 +366,14 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
-          "state": "off",
-          "volume": 20
-        }
-      },
-      "speakers": {
-        "living_room_speaker": {
-          "state": "off",
-          "volume": 20
-        }
       }
     }
   }
 ```
 
-## Trial 10 - complex context, ambiguous command 
+## Trial 7 - medium context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -688,28 +385,22 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "bedroom_tv": {
-          "state": "off",
-          "volume": 20
-        }
       }
     },
     "living_room": {
       "lights": {
         "overhead": {
-          "state": "off",
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
           "color": {
             "r": 255,
             "g": 255,
@@ -727,17 +418,109 @@ chatgpt's changes to the devices:
             "b": 255
           }
         }
-      },
-      "tvs": {
-        "living_room_tv": {
+      }
+    }
+  }
+```
+
+## Trial 8 - medium context, simple command 
+
+command: **turn on the light**
+
+chatgpt's changes to the devices: 
+
+``` json
+  {
+    "user": {
+      "location": "living_room"
+    },
+    "bedroom": {
+      "lights": {
+        "bedside_lamp": {
           "state": "off",
-          "volume": 20
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
         }
-      },
-      "speakers": {
-        "living_room_speaker": {
+      }
+    },
+    "living_room": {
+      "lights": {
+        "overhead": {
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "lamp": {
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        }
+      }
+    }
+  }
+```
+
+## Trial 9 - medium context, simple command 
+
+command: **turn on the light**
+
+chatgpt's changes to the devices: 
+
+``` json
+  {
+    "user": {
+      "location": "living_room"
+    },
+    "bedroom": {
+      "lights": {
+        "bedside_lamp": {
           "state": "off",
-          "volume": 20
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        }
+      }
+    },
+    "living_room": {
+      "lights": {
+        "overhead": {
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "lamp": {
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
         }
       }
     }

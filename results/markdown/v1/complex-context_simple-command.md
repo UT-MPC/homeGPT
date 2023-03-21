@@ -1,4 +1,4 @@
-# complex context, ambiguous command
+# complex context, simple command
 
 ## Instructions
 
@@ -7,9 +7,9 @@ For every trial in this file, please assign a binary score (0 or 1) based on the
 - Poor response (0): The changes to the devices do not at all reflect the intent behind the user command, or the response is malformed/garbled.
 - Good response (1): The changes to the devices are reasonable for the command. You can imagine _someone_             being satisfied with the result, even if it is somewhat subjective (e.g., based on different personal preferences).
 
-## Trial 0 - complex context, ambiguous command 
+## Trial 0 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -21,10 +21,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -53,10 +50,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -80,9 +74,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 1 - complex context, ambiguous command 
+## Trial 1 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -94,10 +88,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -126,10 +117,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -153,19 +141,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 2 - complex context, ambiguous command 
+## Trial 2 - complex context, simple command 
 
-command: **i am tired**
-
-chatgpt's changes to the devices: 
-
-``` 
-invalid JSON in response!
-```
-
-## Trial 3 - complex context, ambiguous command 
-
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -177,10 +155,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -209,10 +184,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -236,9 +208,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 4 - complex context, ambiguous command 
+## Trial 3 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -250,10 +222,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -282,10 +251,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -309,24 +275,21 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 5 - complex context, ambiguous command 
+## Trial 4 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
 ``` json
   {
--   "user": {
--     "location": "living_room"
--   },
+    "user": {
+      "location": "living_room"
+    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -355,10 +318,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -382,9 +342,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 6 - complex context, ambiguous command 
+## Trial 5 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -396,10 +356,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -428,10 +385,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -455,9 +409,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 7 - complex context, ambiguous command 
+## Trial 6 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -469,10 +423,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -501,10 +452,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -528,9 +476,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 8 - complex context, ambiguous command 
+## Trial 7 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -542,10 +490,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -574,10 +519,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -601,9 +543,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 9 - complex context, ambiguous command 
+## Trial 8 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -615,10 +557,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -647,10 +586,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -674,9 +610,9 @@ chatgpt's changes to the devices:
   }
 ```
 
-## Trial 10 - complex context, ambiguous command 
+## Trial 9 - complex context, simple command 
 
-command: **i am tired**
+command: **turn on the light**
 
 chatgpt's changes to the devices: 
 
@@ -688,10 +624,7 @@ chatgpt's changes to the devices:
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -709,7 +642,10 @@ chatgpt's changes to the devices:
     "living_room": {
       "lights": {
         "overhead": {
-          "state": "off",
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
           "color": {
             "r": 255,
             "g": 255,
@@ -717,10 +653,7 @@ chatgpt's changes to the devices:
           }
         },
         "lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
