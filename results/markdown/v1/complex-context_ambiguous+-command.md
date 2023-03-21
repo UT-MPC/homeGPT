@@ -13,8 +13,65 @@ command: **I am tired and I need to work**
 
 chatgpt's changes to the devices: 
 
-```
-invalid JSON in response!
+``` json
+  {
+    "bedroom": {
+      "lights": {
+        "bedside_lamp": {
+          "state": "off",
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        }
+      },
+      "tvs": {
+        "bedroom_tv": {
+          "state": "off",
+          "volume": 20
+        }
+      }
+    },
+    "living_room": {
+      "lights": {
+        "overhead": {
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "lamp": {
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        }
+      },
+      "tvs": {
+        "living_room_tv": {
+          "state": "off",
+          "volume": 20
+        }
+      },
+      "speakers": {
+        "living_room_speaker": {
+          "state": "off",
+          "volume": 20
+        }
+      }
+    }
+  }
 ```
 
 ## Trial 1 - complex context, ambiguous+ command 
@@ -25,9 +82,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -95,16 +149,10 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -168,16 +216,10 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -195,7 +237,10 @@ chatgpt's changes to the devices:
     "living_room": {
       "lights": {
         "overhead": {
-          "state": "off",
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
           "color": {
             "r": 255,
             "g": 255,
@@ -238,9 +283,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -308,9 +350,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -378,9 +417,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -448,16 +484,10 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,
@@ -521,9 +551,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -591,16 +618,10 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
--         "state": "off",
-?                    ^^
-+         "state": "on",
-?                    ^
+          "state": "off",
           "color": {
             "r": 255,
             "g": 255,

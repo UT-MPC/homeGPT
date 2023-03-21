@@ -15,12 +15,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
--     "location": "living_room"
-?                  ^^^^^^^
-+     "location": "bedroom"
-?                  ^^^
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -38,9 +32,7 @@ chatgpt's changes to the devices:
       "tvs": {
         "bedroom_tv": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       }
     },
@@ -66,17 +58,13 @@ chatgpt's changes to the devices:
       "tvs": {
         "living_room_tv": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       },
       "speakers": {
         "living_room_speaker": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       }
     }
@@ -91,12 +79,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
--     "location": "living_room"
-?                  ^^^^^^^
-+     "location": "bedroom"
-?                  ^^^
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -161,12 +143,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
--     "location": "living_room"
-?                  ^^^^^^^
-+     "location": "bedroom"
-?                  ^^^
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -175,27 +151,16 @@ chatgpt's changes to the devices:
 +         "state": "on",
 ?                    ^
           "color": {
--           "r": 255,
-?                ^^^
-+           "r": 0,
-?                ^
--           "g": 255,
-?                ^^^
-+           "g": 0,
-?                ^
--           "b": 255
-?                ^^^
-+           "b": 0
-?                ^
+            "r": 255,
+            "g": 255,
+            "b": 255
           }
         }
       },
       "tvs": {
         "bedroom_tv": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       }
     },
@@ -221,17 +186,13 @@ chatgpt's changes to the devices:
       "tvs": {
         "living_room_tv": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       },
       "speakers": {
         "living_room_speaker": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       }
     }
@@ -246,9 +207,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -257,27 +215,16 @@ chatgpt's changes to the devices:
 +         "state": "on",
 ?                    ^
           "color": {
--           "r": 255,
-?                ^^^
-+           "r": 0,
-?                ^
--           "g": 255,
-?                ^^^
-+           "g": 0,
-?                ^
--           "b": 255
-?                ^^^
-+           "b": 0
-?                ^
+            "r": 255,
+            "g": 255,
+            "b": 255
           }
         }
       },
       "tvs": {
         "bedroom_tv": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       }
     },
@@ -303,17 +250,13 @@ chatgpt's changes to the devices:
       "tvs": {
         "living_room_tv": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       },
       "speakers": {
         "living_room_speaker": {
           "state": "off",
--         "volume": 20
-?                   -
-+         "volume": 0
+          "volume": 20
         }
       }
     }
@@ -328,9 +271,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -395,9 +335,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -462,12 +399,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
--     "location": "living_room"
-?                  ^^^^^^^
-+     "location": "bedroom"
-?                  ^^^
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -538,12 +469,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
--     "location": "living_room"
-?                  ^^^^^^^
-+     "location": "bedroom"
-?                  ^^^
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -561,7 +486,9 @@ chatgpt's changes to the devices:
       "tvs": {
         "bedroom_tv": {
           "state": "off",
-          "volume": 20
+-         "volume": 20
+?                   -
++         "volume": 0
         }
       }
     },
@@ -587,13 +514,17 @@ chatgpt's changes to the devices:
       "tvs": {
         "living_room_tv": {
           "state": "off",
-          "volume": 20
+-         "volume": 20
+?                   -
++         "volume": 0
         }
       },
       "speakers": {
         "living_room_speaker": {
           "state": "off",
-          "volume": 20
+-         "volume": 20
+?                   -
++         "volume": 0
         }
       }
     }
@@ -608,9 +539,6 @@ chatgpt's changes to the devices:
 
 ``` json
   {
-    "user": {
-      "location": "living_room"
-    },
     "bedroom": {
       "lights": {
         "bedside_lamp": {
@@ -673,7 +601,61 @@ command: **I am tired and I want to sleep**
 
 chatgpt's changes to the devices: 
 
-```
-invalid JSON in response!
+``` json
+  {
+    "bedroom": {
+      "lights": {
+        "bedside_lamp": {
+-         "state": "off",
+?                    ^^
++         "state": "on",
+?                    ^
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        }
+      },
+      "tvs": {
+        "bedroom_tv": {
+          "state": "off",
+          "volume": 20
+        }
+      }
+    },
+    "living_room": {
+      "lights": {
+        "overhead": {
+          "state": "off",
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "lamp": {
+          "state": "off",
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        }
+      },
+      "tvs": {
+        "living_room_tv": {
+          "state": "off",
+          "volume": 20
+        }
+      },
+      "speakers": {
+        "living_room_speaker": {
+          "state": "off",
+          "volume": 20
+        }
+      }
+    }
+  }
 ```
 
